@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block columns %}
+    {% for column in columns %}
+        {% if column=="description" %}
+            <th style ="width: 70%">
+                {{ column }}
+            </th>
+        {% elif column=="date"%}
+            <th style ="width: 10%">
+                {{ column }}
+            </th>
+        {% else %}
+            <th>
+                {{ column }}
+            </th>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+
+{% block rows %}
+    {% for row in rows %}
+    <tr>
+        {% for row_item in row.values() %}
+            <td>
+                {{ row_item }}
+            </td>
+        {% endfor %}
+    </tr>
+{% endfor %}
+{% endblock %}

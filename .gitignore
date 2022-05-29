@@ -1,0 +1,7 @@
+venv/
+*.ini
+.env
+docker-compose.yml
+Dockerfile
+test.py
+*.pyc

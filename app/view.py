@@ -2,12 +2,12 @@ import logging
 import os
 import sys
 from configparser import ConfigParser
-from app import app
+from start import app_run
 from flask import render_template
 from models import MYSQLer
 
 
-@app.route('/')
+@app_run.route('/')
 def index():
     base_path = os.path.dirname(os.path.abspath(__file__))
     config_path = os.path.join(base_path, 'mysql.ini')
